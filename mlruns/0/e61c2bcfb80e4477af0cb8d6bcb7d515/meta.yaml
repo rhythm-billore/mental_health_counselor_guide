@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/apare/git_repos/mental_health_counselor_guide/mlruns/0/e61c2bcfb80e4477af0cb8d6bcb7d515/artifacts
+end_time: 1734585390038
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e61c2bcfb80e4477af0cb8d6bcb7d515
+run_name: ambitious-trout-143
+run_uuid: e61c2bcfb80e4477af0cb8d6bcb7d515
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734585382341
+status: 3
+tags: []
+user_id: apare

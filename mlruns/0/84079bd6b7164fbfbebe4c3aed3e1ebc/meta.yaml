@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/apare/git_repos/mental_health_counselor_guide/mlruns/0/84079bd6b7164fbfbebe4c3aed3e1ebc/artifacts
+end_time: 1734577186455
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 84079bd6b7164fbfbebe4c3aed3e1ebc
+run_name: polite-rook-724
+run_uuid: 84079bd6b7164fbfbebe4c3aed3e1ebc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734577183895
+status: 3
+tags: []
+user_id: apare

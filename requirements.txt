@@ -1,0 +1,13 @@
+pandas
+numpy
+seaborn
+matplotlib
+mlflow
+scikit-learn
+transformers
+tqdm
+streamlit
+torch
+ipywidgets
+#openai
+mistralai
