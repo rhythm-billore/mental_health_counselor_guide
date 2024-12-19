@@ -2,21 +2,42 @@ import streamlit as st
 import mlflow
 import mlflow.sklearn
 import numpy as np
-import os 
+import os
+import pickle
+from pathlib import Path
 #from openai import OpenAI
 from mistralai import Mistral
 
 model_uri = "runs:/e61c2bcfb80e4477af0cb8d6bcb7d515/random_forest_model"  
 vectorizer_model_uri = "runs:/84079bd6b7164fbfbebe4c3aed3e1ebc/vectorizer"
-rf_model = mlflow.sklearn.load_model(model_uri)
-vectorizer_model = mlflow.sklearn.load_model(vectorizer_model_uri)
+
+def download_model(model_uri, output_dir):
+    output_dir.parent.mkdir(exist_ok=True)
+    mlflow.artifacts.download_artifacts(artifact_uri=model_uri, dst_path=output_dir)
+
+model_dir_path = Path('models/')
+
+rf_model_path = model_dir_path / 'random_forest_model' / 'model.pkl'
+download_model(model_uri, model_dir_path)
+with open(rf_model_path, 'rb') as file:
+    rf_model = pickle.load(file)
+
+
+vectorizer_model_path = model_dir_path / 'vectorizer' / 'model.pkl'
+download_model(vectorizer_model_uri, model_dir_path)
+with open(vectorizer_model_path, 'rb') as file:
+    vectorizer_model = pickle.load(file)
+
+#vectorizer_model = mlflow.sklearn.load_model(vectorizer_model_uri)
 api_key = os.environ.get("mistral_ai_api_key")
 
 client = Mistral(api_key=api_key)
 
+
+
+
 # Model
 def process_text_with_model(text, model):
-
     features = vectorizer_model.transform([text]).toarray()  
     prediction = model.predict(features)
     return prediction

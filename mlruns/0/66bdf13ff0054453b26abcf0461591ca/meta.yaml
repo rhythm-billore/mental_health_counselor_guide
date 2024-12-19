@@ -1,4 +1,4 @@
-artifact_uri: file:///Users/apare/git_repos/mental_health_counselor_guide/streamlit_app_counsellor_input/mlruns/0/66bdf13ff0054453b26abcf0461591ca/artifacts
+artifact_uri: ./mlruns/0/66bdf13ff0054453b26abcf0461591ca/artifacts
 end_time: 1734575940665
 entry_point_name: ''
 experiment_id: '0'
